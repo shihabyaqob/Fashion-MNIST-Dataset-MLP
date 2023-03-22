@@ -1,0 +1,48 @@
+# Fashion-MNIST Dataset
+
+This repository contains the Fashion-MNIST dataset of Zalando's article images. The dataset consists of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. The purpose of this dataset is to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms.
+
+# Dataset Description
+
+Each image in the dataset is 28 pixels in height and 28 pixels in width, for a total of 784 pixels. Each pixel has a single pixel value associated with it, indicating the lightness or darkness of that pixel, with higher numbers indicating darker. This pixel value is an integer between 0 and 255. The training and test data sets have 785 columns. The first column consists of the class labels (0-9), representing the article of clothing. The rest of the columns contain the pixel values of the associated image.
+
+To locate a pixel on the image, we can decompose x as x = i \* 28 + j, where i and j are integers between 0 and 27. The pixel is located on row i and column j of a 28 x 28 matrix. For example, pixel 31 indicates the pixel that is in the fourth column from the left and the second row from the top.
+
+# Labels
+
+Each training and test example is assigned to one of the following labels:
+
+0: T-shirt/top
+1: Trouser
+2: Pullover
+3: Dress
+4: Coat
+5: Sandal
+6: Shirt
+7: Sneaker
+8: Bag
+9: Ankle boot
+
+# Files
+
+This repository contains the following files:
+
+fashion-mnist_train.csv: the training set
+fashion-mnist_test.csv: the test set
+sample_submission.csv: a sample submission file in the correct format
+Usage
+To download and use this dataset, you can clone this repository or download the CSV files directly. Here's an example of how to load the dataset using Python:
+
+# python
+
+import pandas as pd
+
+Load the training data:
+train_data = pd.read_csv('fashion-mnist_train.csv')
+
+Load the test data:
+test_data = pd.read_csv('fashion-mnist_test.csv')
+
+# Acknowledgements
+
+The Fashion-MNIST dataset was created by Zalando Research under the MIT License. The dataset is intended to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms.
